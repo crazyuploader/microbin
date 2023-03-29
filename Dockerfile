@@ -34,4 +34,4 @@ COPY --from=build \
 # Expose webport used for the webserver to the docker runtime
 EXPOSE 8080
 
-ENTRYPOINT ["microbin"]
+ENTRYPOINT ["microbin", "--default-expiry", "1week", "--footer-text", "Served by Caddy", "--editable", "--enable-burn-after", "--private", "--qr", "--highlightsyntax", "--no-listing", "--public-path", "https://microbin.devjugal.com", "--wide"]

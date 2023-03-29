@@ -1,0 +1,9 @@
+version: "3.2"
+services:
+  paste:
+    build: .
+    restart: always
+    ports:
+      - 8003:8080
+    volumes:
+      - ./microbin-data:/app/pasta_data
